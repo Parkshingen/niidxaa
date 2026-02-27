@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>7K Followers Ka Woh Secret — niidxaa</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --black: #0D0D0D;
+    --gold: #C8975A;
+    --gold-light: #E8C49A;
+    --rose: #D4756A;
+    --sage: #7A9E7E;
+    --muted: #6B6560;
+    --card-bg: #FFFFFF;
+    --border: #E8E2D9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--black);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+
+  /* ── PAGE WRAPPER ── */
+  .ebook {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(200,151,90,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(212,117,106,0.12) 0%, transparent 55%);
+  }
+
+  .cover-noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .cover-lines {
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(200,151,90,0.06) 60px);
+    pointer-events: none;
+  }
+
+  .cover-badge {
+    position: relative;
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200,151,90,0.4);
+    padding: 6px 18px;
+    margin-bottom: 48px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .cover-title {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 10vw, 96px);
+    font-weight: 900;
+    color: var(--cream);
+    line-height: 1.0;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+    animation: fadeUp 0.9s 0.1s ease both;
+  }
+
+  .cover-title span {
+    display: block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover-subtitle {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(16px, 3vw, 22px);
+    color: rgba(250,247,242,0.65);
+    margin: 24px auto 40px;
+    max-width: 520px;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  .cover-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+
+  .cover-divider::before, .cover-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    max-width: 120px;
+  }
+
+  .cover-divider span {
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+    color: var(--gold);
+  }
+
+  .cover-author {
+    position: relative;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(250,247,242,0.5);
+    text-transform: uppercase;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+
+  .cover-author strong { color: var(--gold); }
+
+  .cover-tagline {
+    position: relative;
+    margin-top: 56px;
+    padding: 20px 32px;
+    border-left: 3px solid var(--gold);
+    text-align: left;
+    max-width: 440px;
+    animation: fadeUp 1s 0.5s ease both;
+  }
+
+  .cover-tagline p {
+    font-size: 15px;
+    color: rgba(250,247,242,0.7);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .cover-img {
+    position: relative;
+    margin-top: 48px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeUp 1s 0.6s ease both;
+  }
+
+  .cover-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.55;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .cover-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(13,13,13,0.9) 0%, transparent 60%);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── PAGE BREAK ── */
+  .page-break {
+    margin: 80px 0 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .page-break::before, .page-break::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .page-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+  }
+
+  /* ── CHAPTER HEADER ── */
+  .chapter-header {
+    margin-bottom: 48px;
+  }
+
+  .chapter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chapter-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold-light), transparent);
+    max-width: 80px;
+  }
+
+  .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--black);
+  }
+
+  .chapter-subtitle {
+    margin-top: 12px;
+    font-size: 17px;
+    color: var(--muted);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ── BODY TEXT ── */
+  .body-text {
+    font-size: 16px;
+    color: #2A2622;
+    line-height: 1.85;
+    margin-bottom: 24px;
+  }
+
+  .body-text strong { color: var(--black); font-weight: 600; }
+
+  /* ── SECTION IMAGE ── */
+  .section-img {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 36px 0;
+    position: relative;
+  }
+
+  .section-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .section-img figcaption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 16px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color: white;
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .callout::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+  }
+
+  .callout-gold {
+    background: linear-gradient(135deg, #FDF5E8, #FAF0DB);
+    border: 1px solid rgba(200,151,90,0.25);
+  }
+  .callout-gold::before { background: var(--gold); }
+
+  .callout-rose {
+    background: linear-gradient(135deg, #FDF0EE, #FAE8E6);
+    border: 1px solid rgba(212,117,106,0.25);
+  }
+  .callout-rose::before { background: var(--rose); }
+
+  .callout-sage {
+    background: linear-gradient(135deg, #EFF5EF, #E5F0E6);
+    border: 1px solid rgba(122,158,126,0.25);
+  }
+  .callout-sage::before { background: var(--sage); }
+
+  .callout-dark {
+    background: var(--black);
+    border: 1px solid rgba(200,151,90,0.2);
+  }
+  .callout-dark::before { background: var(--gold); }
+  .callout-dark .callout-label { color: var(--gold-light); }
+  .callout-dark .callout-text { color: rgba(250,247,242,0.85); }
+
+  .callout-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .callout-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2A2622;
+  }
+
+  /* ── PROBLEM CARDS ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .problem-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    align-items: start;
+    transition: box-shadow 0.2s;
+  }
+
+  .problem-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+
+  .problem-icon {
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #FDF5E8, #F5E6CC);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .problem-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .problem-card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── CAS STEPS ── */
+  .cas-grid {
+    display: grid;
+    gap: 28px;
+    margin: 40px 0;
+  }
+
+  .cas-step {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cas-step::after {
+    content: attr(data-letter);
+    position: absolute;
+    right: 24px; top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: rgba(200,151,90,0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .cas-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--black);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cas-step h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .cas-step p {
+    font-size: 15px;
+    color: #3A3530;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .example-box {
+    background: #F5F0E8;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+    font-family: 'DM Mono', monospace;
+    color: var(--black);
+    border-left: 3px solid var(--gold);
+  }
+
+  /* ── PRO TIPS ── */
+  .tips-grid {
+    display: grid;
+    gap: 20px;
+    margin: 36px 0;
+  }
+
+  .tip-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .tip-number {
+    width: 36px; height: 36px;
+    background: var(--black);
+    color: var(--gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .tip-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .tip-card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── 30 DAY PLAN ── */
+  .plan-phases {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 36px 0;
+  }
+
+  .phase-card {
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-1 { background: linear-gradient(135deg, #FDF5E8, #F5E6CC); }
+  .phase-2 { background: linear-gradient(135deg, #EFF5EF, #DFF0E0); }
+  .phase-3 { background: linear-gradient(135deg, #FDF0EE, #FAE0DC); }
+
+  .phase-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .phase-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .phase-items {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .phase-items li {
+    font-size: 14px;
+    color: #2A2622;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+  }
+
+  .phase-items li::before {
+    content: '→';
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── SUMMARY FLOWCHART ── */
+  .flowchart {
+    background: var(--black);
+    border-radius: 20px;
+    padding: 48px 40px;
+    margin: 40px 0;
+  }
+
+  .flowchart h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cream);
+    font-size: 24px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .flow-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(200,151,90,0.25);
+    border-radius: 12px;
+    padding: 18px 28px;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .flow-item span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .flow-item p {
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .flow-arrow {
+    color: var(--gold);
+    font-size: 28px;
+    line-height: 1;
+    padding: 8px 0;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: var(--black);
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(200,151,90,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cta-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    color: var(--cream);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .cta-title em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-body {
+    font-size: 16px;
+    color: rgba(250,247,242,0.7);
+    max-width: 520px;
+    margin: 0 auto 36px;
+    line-height: 1.75;
+  }
+
+  .cta-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 580px;
+    margin: 0 auto 40px;
+  }
+
+  .cta-step-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,151,90,0.2);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .cta-step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 24px;
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .cta-step-item p {
+    font-size: 13px;
+    color: rgba(250,247,242,0.65);
+    line-height: 1.5;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), #B8844A);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 18px 44px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 12px 32px rgba(200,151,90,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(200,151,90,0.45);
+  }
+
+  .cta-sign {
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(250,247,242,0.5);
+  }
+
+  .cta-sign strong {
+    color: var(--gold);
+  }
+
+  /* ── INDEX ── */
+  .index-grid {
+    display: grid;
+    gap: 4px;
+    margin: 32px 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--card-bg);
+  }
+
+  .index-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 20px;
+    transition: background 0.15s;
+  }
+
+  .index-item:last-child { border-bottom: none; }
+  .index-item:hover { background: #F9F5EE; }
+
+  .index-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    width: 28px;
+    flex-shrink: 0;
+  }
+
+  .index-name {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .index-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    background: var(--cream);
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+  }
+
+  /* ── CHAPTER TAKEAWAY ── */
+  .takeaway {
+    background: linear-gradient(135deg, #FDF5E8, #F5E6CC);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 48px;
+    border: 1px solid rgba(200,151,90,0.2);
+  }
+
+  .takeaway-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .takeaway ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .takeaway ul li {
+    font-size: 14px;
+    color: #2A2622;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+  }
+
+  .takeaway ul li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+
+  /* ── AESTHETIC SECTION IMAGE ── */
+  .aesthetic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .aesthetic-grid figure {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .aesthetic-grid figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .aesthetic-grid figcaption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    font-size: 12px;
+    padding: 12px 14px;
+    font-style: italic;
+  }
+
+  /* ── HORIZONTAL RULE ── */
+  hr.section-break {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(20px, 3.5vw, 28px);
+    color: var(--black);
+    border-left: 4px solid var(--gold);
+    padding: 16px 0 16px 28px;
+    margin: 40px 0;
+    line-height: 1.5;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 60px 0 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .footer strong { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .cta-section { padding: 40px 24px; }
+    .flowchart { padding: 32px 24px; }
+    .cas-step { padding: 28px 24px; }
+    .aesthetic-grid { grid-template-columns: 1fr; }
+    .cover { padding: 60px 24px; }
+    .cover-title { letter-spacing: -1px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     COVER PAGE
+════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-noise"></div>
+  <div class="cover-lines"></div>
+
+  <div class="cover-badge">Digital Growth Guide · 2024 Edition</div>
+
+  <h1 class="cover-title">
+    7K Followers Ka<br><span>Woh Secret</span>
+  </h1>
+
+  <p class="cover-subtitle">Jo Koi Saheli Nahi Batati — The Logical Guide to 7,000 Organic Followers Without Spending a Single Rupee on Ads</p>
+
+  <div class="cover-divider">
+    <div class="cover-divider::before"></div>
+    <span>✦</span>
+    <div class="cover-divider::after"></div>
+  </div>
+
+  <p class="cover-author">A Practical Guide by <strong>@niidxaa</strong></p>
+
+  <div class="cover-img">
+    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&q=80" alt="Instagram Growth" />
+    <div class="cover-img-overlay"></div>
+  </div>
+
+  <div class="cover-tagline">
+    <p>"Stop guessing the algorithm. Start building your authority. Ek sahi strategy, ek sahi move — aur sab badal jaata hai."</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     EBOOK BODY
+════════════════════════════════════════════════════ -->
+<div class="ebook">
+
+  <!-- INDEX -->
+  <div class="page-break"><span class="page-number">Table of Contents</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">00 · Navigation</div>
+    <h2 class="chapter-title">Ebook Ka Roadmap</h2>
+    <p class="chapter-subtitle">Pehle jaano, phir padhna shuru karo</p>
+  </div>
+
+  <div class="index-grid">
+    <div class="index-item"><span class="index-num">01</span><span class="index-name">Chalo Shuru Karte Hain — Introduction</span><span class="index-tag">The Beginning</span></div>
+    <div class="index-item"><span class="index-num">02</span><span class="index-name">Followers Kyun Nahi Badh Rahe? — The Real Problem</span><span class="index-tag">Asli Dard</span></div>
+    <div class="index-item"><span class="index-num">03</span><span class="index-name">Mera Secret Formula: C-A-S — The Strategy</span><span class="index-tag">Core Framework</span></div>
+    <div class="index-item"><span class="index-num">04</span><span class="index-name">Account Ko Sundar Kaise Banayein? — Aesthetic Logic</span><span class="index-tag">Visual Game</span></div>
+    <div class="index-item"><span class="index-num">05</span><span class="index-name">Kuch Khaas Tips Mere Taraf Se — Pro Growth Tips</span><span class="index-tag">Insider Secrets</span></div>
+    <div class="index-item"><span class="index-num">06</span><span class="index-name">30 Din Ka Game Plan — Step-by-Step Action</span><span class="index-tag">Execution</span></div>
+    <div class="index-item"><span class="index-num">07</span><span class="index-name">Sab Kuch Ek Nazar Mein — Summary Flowchart</span><span class="index-tag">Quick Reference</span></div>
+    <div class="index-item"><span class="index-num">08</span><span class="index-name">Ab Baari Aapki Hai — Call to Action</span><span class="index-tag">Start Now</span></div>
+  </div>
+
+  <!-- CHAPTER 1 — INTRODUCTION -->
+  <div class="page-break"><span class="page-number">Chapter 01</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">01 · Introduction</div>
+    <h2 class="chapter-title">Chalo Shuru Karte Hain</h2>
+    <p class="chapter-subtitle">Ek honest baat aur ek bada promise</p>
+  </div>
+
+  <figure class="section-img">
+    <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=900&q=80" alt="Someone scrolling Instagram on phone" />
+    <figcaption>Instagram par grow karna possible hai — bas sahi direction chahiye</figcaption>
+  </figure>
+
+  <p class="body-text">Suno, main seedha baat karti hoon — Instagram par grow karna koi rocket science nahi hai. <strong>Par yeh bhi sach hai ki bina strategy ke mehnat karna, adhere mein teer chalane jaisa hai.</strong> Tum roz content banate ho, raat ko late tak editing karte ho, captions sochte ho, hashtags dhundhte ho — phir bhi wahi 300-400 followers. Bahut frustrating lagta hai, right?</p>
+
+  <p class="body-text">Maine yeh sab khud feel kiya hai. Ek waqt tha jab mera account bhi stuck tha. Main sochti thi ki shayad main interesting nahi hoon, ya mera content itna achha nahi hai. Par sacchi baat yeh thi ki mujhe sirf ek cheez missing thi — <strong>ek logical, tested system.</strong></p>
+
+  <div class="pull-quote">"Mehnat karna aur sahi jagah mehnat karna — in dono mein zameen aasman ka fark hai."</div>
+
+  <p class="body-text">Is guide mein, main niidxaa, tumhe koi jugaad nahi bataungi. Koi "1000 followers in 24 hours" wali bakwaas nahi hai yahan. Yeh ek real, step-by-step blueprint hai jo maine personally test kiya hai. <strong>Iss guide ke end tak, tumhare paas ek complete action plan hoga</strong> — cover page se leke CTA tak, sab kuch crystal clear.</p>
+
+  <p class="body-text">Aaj ke time mein 7k followers hona sirf ek number nahi hai. Yeh ek credibility ka symbol hai. Brands collaborations ke liye approach karti hain, log tumhe seriously lete hain, aur tum apne passion ko ek proper platform dete ho. <strong>Yeh sab possible hai — tumhare liye bhi.</strong></p>
+
+  <div class="callout callout-gold">
+    <div class="callout-label">💬 Quick Note</div>
+    <p class="callout-text">Is guide ki language intentionally simple aur conversational rakhi gayi hai — kyunki growth strategies sirf tab kaam karti hain jab tum unhe truly samjho. Koi jargon nahi, koi complexity nahi. Bas real talk.</p>
+  </div>
+
+  <p class="body-text">Toh ready ho? Apna phone side mein rakh do, ek cup chai bana lo, aur poora dhyan yahan lagao. Aaj se tumhari Instagram journey bilkul alag hone wali hai. Let's build your momentum together. ✨</p>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>Instagram growth ke liye talent se zyada system ki zaroorat hoti hai.</li>
+      <li>Stuck feel karna normal hai — par isme rehna optional hai.</li>
+      <li>Yeh guide tumhe ek proven blueprint dega, guesswork nahi.</li>
+    </ul>
+  </div>
+
+  <!-- CHAPTER 2 — THE REAL PROBLEM -->
+  <div class="page-break"><span class="page-number">Chapter 02</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">02 · The Real Problem</div>
+    <h2 class="chapter-title">Followers Kyun Nahi Badh Rahe?</h2>
+    <p class="chapter-subtitle">Asli wajah jo koi nahi batata</p>
+  </div>
+
+  <p class="body-text">Sabse pehle ek cheez clear kar lete hain — <strong>problem tumhara content nahi hai. Problem tumhari approach hai.</strong> Log bahut badi galti karte hain — wo "Gadha-mehnat" karte hai bina soche samjhe. Bina soche samjhe kuch bhi upload kar dete hain aur sochte hain ki viral ho jayenge. Iska result? Ek week baad wahi 412 followers.</p>
+
+  <p class="body-text">Maine 100+ Instagram accounts ko study kiya hain — jo grow hue aur jo nahi hue. Pattern bilkul clear tha. Jo accounts stuck the, unme se almost sab yahi 4 mistakes kar rahe the:</p>
+
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-icon">⏱️</div>
+      <div>
+        <h4>Boring Opening (No Hook)</h4>
+        <p>Agar aapki reel ke shuru ke 2 seconds bhi kisi ko rok nahi pa rahi, toh wo flop hai. Log Instagram ko mindlessly scroll karte hain — unka thumb tab hi rukta hai jab kuch genuinely interesting ho. Ek weak start matlab ek dead video.</p>
+      </div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🌀</div>
+      <div>
+        <h4>Identity Crisis — Sab Kuch Mix</h4>
+        <p>Aaj khana, kal fashion haul, parso travel vlog, use agle din motivation quotes — aise account ko Instagram ka algorithm samajh hi nahi paata. Algorithm ko pata nahi hota ki yeh account kiske liye hai. Result? Reach near zero.</p>
+      </div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">📷</div>
+      <div>
+        <h4>Poor Video Quality</h4>
+        <p>Agar video blurry hai ya lens pe fingerprints hain ya lighting dull hai — log 0.5 second mein scroll kar dete hain. Instagram ek visual platform hai. Quality sirf nice-to-have nahi hai, yeh entry ticket hai.</p>
+      </div>
+    </div>
+    <div class="problem-card">
+      <div class="problem-icon">🔇</div>
+      <div>
+        <h4>Zero Engagement Strategy</h4>
+        <p>Post karne ke baad phone rakh dena aur sona — yahi sabse bada blunder ho jata hai. Algorithm pehle 1 ghante mein decide karta hai ki video push karni hai ya nahi. Uss ghante mein tum absent the, toh algorithm bhi absent raha.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-rose">
+    <div class="callout-label">⚠️ Avoid This Mindset</div>
+    <p class="callout-text"><strong>"Zyaada post karungi toh zyaada grow karungi"</strong> — yeh soch tumhe zyada hurt karegi. Frequency se zyaada consistency aur quality matter karti hai. Hafte mein 3 killer videos, 7 average videos se 10x better hain.</p>
+  </div>
+
+  <p class="body-text">Yeh jaanna important hai kyunki jab tak tum asli problem identify nahi karoge, tum solution par bhi sahi kaam nahi kar sakte. Ab jab humne diagnosis kar li hai, chalo treatment par aate hain. 👇</p>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>Problem content nahi, strategy hai — pehle yeh mindset shift karo.</li>
+      <li>Algorithm confuse karna matlab tum khud apni reach rok rahe ho.</li>
+      <li>Quality over quantity — yeh rule kabhi change nahi hoga.</li>
+    </ul>
+  </div>
+
+  <!-- CHAPTER 3 — C-A-S STRATEGY -->
+  <div class="page-break"><span class="page-number">Chapter 03</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">03 · The Core Framework</div>
+    <h2 class="chapter-title">Mera Secret Formula: C-A-S</h2>
+    <p class="chapter-subtitle">Teen steps, ek transformation</p>
+  </div>
+
+  <p class="body-text">Bahut saari cheezein try karne ke baad, mujhe realize hua ki Instagram growth actually teen cheezon par depend karti hai — <strong>Captivate, Align, Share.</strong> Yahi mera C-A-S framework hai. Simple lagta hai? Hai bhi. Par execution mein hi sab kuch hai.</p>
+
+  <div class="cas-grid">
+    <div class="cas-step" data-letter="C">
+      <span class="cas-tag">Step 01 · C</span>
+      <h3>Captivate — Rok Ke Rakho</h3>
+      <p>Tumhari reel ya post ka pehla second — yahi sab kuch decide karta hai. Isse "Hook" kehte hain. Ek powerful hook woh hota hai jo viewer ke andar ek sawaal, ek emotion, ya ek curiosity create kare — itni strong ki wo scroll karna bhool jaye.</p>
+      <p>Hook visual bhi ho sakta hai (sudden cut, unexpected angle) ya verbal bhi (ek aisi line jo sunke log ruk jayein). <strong>Jo bhi ho — wo pehle 1.5 seconds mein deliver hona chahiye.</strong></p>
+      <div class="example-box">
+        📝 Hook Examples:<br><br>
+        "Yeh ek galti aapka account dead kar rahi hai..." ✅<br>
+        "How I styled this full look for just ₹500" ✅<br>
+        "Mujhe 2 saal kyun laage yeh samajhne mein..." ✅<br><br>
+        "Aaj main apna outfit share kar rahi hoon" ❌
+      </div>
+    </div>
+
+    <div class="cas-step" data-letter="A">
+      <span class="cas-tag">Step 02 · A</span>
+      <h3>Align — Ek Jaisa Dikho</h3>
+      <p>Jab koi pehli baar tumhara viral reel dekhta hai, toh wo immediately tumhare profile par jaata hai. Us moment mein tumhara profile ek showroom ki tarah kaam karta hai. <strong>Agar showroom messy hai — customer chala jaata hai.</strong></p>
+      <p>Alignment ka matlab hai: ek consistent color palette, ek consistent posting tone, ek specific niche, aur ek bio jo clearly bataye ki tum koun ho aur kaise help karte ho. Sab kuch ek-sa — ek brand ki tarah.</p>
+      <div class="callout callout-sage" style="margin-top:20px;">
+        <div class="callout-label">⚡ Power Move</div>
+        <p class="callout-text">Apne Instagram profile ko phone mein khol ke screenshot lo. Kisi aur ko dikhao jo tumhe personally nahi jaanta. Puchho: "Kya yeh clear hai ki yeh account kiske liye hai?" Agar answer 'no' hai — time to align.</p>
+      </div>
+    </div>
+
+    <div class="cas-step" data-letter="S">
+      <span class="cas-tag">Step 03 · S</span>
+      <h3>Share — Viral Ka Asli Secret</h3>
+      <p>Likes aur comments ache hain — par <strong>Shares asli game-changer hain.</strong> Jab koi tumhara content apni story par share karta hai ya kisi dost ko forward karta hai, toh algorithm ko ek strong signal jaata hai ki yeh content genuinely valuable hai.</p>
+      <p>Shareable content wo hota hai jo log apne naam se associate karna chahein — helpful tips, relatable situations, aesthetic reels jinhe wo apni story pe lagaayein, ya aisi information jo unhe "yaar yeh dekh!" wala feel de.</p>
+      <div class="example-box">
+        📝 Shareable Content Types:<br><br>
+        ✅ "Save karo, baad mein kaam aayega" type tips<br>
+        ✅ Relatable humor jo specific audience feel kare<br>
+        ✅ Before/After transformations<br>
+        ✅ Aesthetic reels with trending audio<br>
+        ❌ Self-promotional posts ("Follow karo please")
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>C-A-S framework: Captivate with hooks, Align your profile brand, create Shareable content.</li>
+      <li>Pehla second decide karta hai ki video chalegi ya nahi — invest karo usme.</li>
+      <li>Profile ek showroom hai — hamesha ready rakhao naye visitors ke liye.</li>
+    </ul>
+  </div>
+
+  <!-- CHAPTER 4 — AESTHETIC -->
+  <div class="page-break"><span class="page-number">Chapter 04</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">04 · Visual Game</div>
+    <h2 class="chapter-title">Account Ko Sundar Kaise Banayein?</h2>
+    <p class="chapter-subtitle">Aesthetic logic — jo feel hota hai, wo sell hota hai</p>
+  </div>
+
+  <p class="body-text">Instagram ek visual medium hai — matlab yahan pehle aankh convince hoti hai, phir dimag. <strong>Ek visually cohesive account followers ko ek brand ki tarah treat karta hai, ek random person ki tarah nahi.</strong> Aur log brands ko follow karte hain, kyunki brands consistency aur identity ka waada karte hain.</p>
+
+  <div class="aesthetic-grid">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Clean aesthetic feed" />
+      <figcaption>Consistent color palette — ek professional look</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=600&q=80" alt="Instagram content creation" />
+      <figcaption>Natural lighting + clean background = instant quality boost</figcaption>
+    </figure>
+  </div>
+
+  <p class="body-text">Aesthetic banana koi expensive nahi hai. Tumhe professional photographer ya DSLR nahi chahiye. <strong>Tumhe chahiye: natural light, ek saaf lens, aur ek consistent editing style.</strong> That's it. Bas itne se difference se, content 10x better lagta hai.</p>
+
+  <div class="callout callout-dark">
+    <div class="callout-label">🔑 The 3-2-1 Aesthetic Rule</div>
+    <p class="callout-text"><strong>3 colors</strong> ki consistent palette choose karo (e.g., beige, white, brown). <strong>2 fonts</strong> hi use karo across all posts — ek bold, ek clean. <strong>1 editing preset</strong> apply karo har video/photo par. Yahi ek rule tumhari feed ko professional bana dega.</p>
+  </div>
+
+  <p class="body-text">Bio bhi aesthetic ka part hai. <strong>"Cake murder on 20 Oct 🎉🎊💯😂"</strong> type bio professional nahi lagta. Bio mein clearly likho: tum kaun ho, kise help karte ho, aur aage kya karna chahiye (CTA). Example: <em>"Helping you dress well on a budget 💛 | Daily styling tips | Shop my looks below 👇"</em> — yeh professional hai, yeh clear hai, yeh kaam karta hai.</p>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>3-2-1 rule follow karo: 3 colors, 2 fonts, 1 editing preset — hamesha.</li>
+      <li>Natural light tumhara best friend hai — free hai aur results amazing deta hai.</li>
+      <li>Bio ek 5-second elevator pitch hai — use karo wisely.</li>
+    </ul>
+  </div>
+
+  <!-- CHAPTER 5 — PRO TIPS -->
+  <div class="page-break"><span class="page-number">Chapter 05</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">05 · Insider Secrets</div>
+    <h2 class="chapter-title">Kuch Khaas Tips Mere Taraf Se</h2>
+    <p class="chapter-subtitle">Wo cheezein jo 99% creators ignore karte hain</p>
+  </div>
+
+  <p class="body-text">Yeh tips koi basic "post daily" wali advice nahi hain. Yeh practical, tested, aur often overlooked strategies hain. <strong>In mein se ek bhi tip seriously lo — aur difference khud notice karoge.</strong></p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-number">01</div>
+      <div>
+        <h4>Bio Saaf Rakho — Faltu Emojis Hatao</h4>
+        <p>Bio mein 10 emojis aur "life is beautiful" type quotes mat likho. Clearly batao ki <strong>tum kaun ho, kise help karte ho, aur next step kya hai</strong> (link click karo, follow karo, etc.). Profile par aaye naye visitor ke paas sirf 3 seconds hote hain decision lene ke liye — make them count. Ek clear, value-driven bio conversion rate 3x tak badha sakta hai.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">02</div>
+      <div>
+        <h4>Pehle 1 Ghante Ka Golden Window</h4>
+        <p>Instagram ka algorithm post ke baad pehle 60 minutes mein engagement dekh ke decide karta hai ki video ko push karna hai ya nahi. <strong>Iss window mein tum active raho.</strong> Har comment ka reply do — even if it's just "Thank you! 🙏". Stories mein shout-out do. Apni community ke posts par meaningful comments karo. Yeh ek ghanta baaki din se zyaada important hai.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">03</div>
+      <div>
+        <h4>Stories Se Dosti Karo — Daily 3-4 Stories</h4>
+        <p>Stories tumhari audience ko tumse ek <strong>insaan ki tarah connect karti hain, sirf ek content machine se nahi.</strong> Polls use karo ("Kaunsa outfit better lagta hai?"), question stickers lagao, behind-the-scenes dikhao, ya bas apna honest opinion share karo. Jab log tumhe genuinely like karte hain — ek person ki tarah — toh woh tumhara content share karte hain, recommend karte hain, aur long-term follow karte hain.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">04</div>
+      <div>
+        <h4>Keywords Captions Mein — Instagram Ab Search Engine Hai</h4>
+        <p>Instagram ne search feature bahut strengthen kiya hai. Ab log "budget fashion tips" ya "home decor India" jaise keywords directly Instagram mein search karte hain. <strong>Jo creators apne captions mein relevant keywords use karte hain, unhe organic discovery milti hai bilkul free mein.</strong> Apni niche ke top 5-7 search terms identify karo aur naturally captions mein weave karo.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">05</div>
+      <div>
+        <h4>Collaborations — Akele Mat Ladho</h4>
+        <p>Apni niche mein similar size ke creators ko find karo aur <strong>collab reels banao.</strong> Instagram specifically collab posts ko zyaada push karta hai. Ek collab video dono accounts ki combined audience tak pahunchti hai — practically free advertising. Ek meaningful collab months ki mehnat se zyaada grow kar sakta hai. Approach karo with value, not just "bhai feature kar de."</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">06</div>
+      <div>
+        <h4>Trending Audio — Par Smartly Use Karo</h4>
+        <p>Trending sounds use karna helpful hai — par blindly nahi. <strong>Wo trending audio use karo jo tumhare content ke mood se match kare.</strong> Ek serious tutorial pe ek comedy sound awkward lagega. Sahi audio + right hook + quality video = viral combination. Instagram Reels tab zyaada push karta hai jab audio bhi trending ho aur content bhi engaging ho.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-number">07</div>
+      <div>
+        <h4>Analytics Padho — Blind Matt Banao Content</h4>
+        <p>Har hafta apne Instagram insights check karo. <strong>Dekho ki kaunse posts pe reach zyaada thi, kaunse pe saves zyaada the, kaunse pe shares.</strong> Wahi content zyaada banao. Data toh already bata raha hai ki audience kya chahte hai — tum sirf sun nahi rahe. Yeh ek simple habit hai jo consistent growers aur stuck creators mein fark peda karti hai.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-rose">
+    <div class="callout-label">⚠️ Girlie Warning</div>
+    <p class="callout-text"><strong>Follow-Unfollow game mat khelo.</strong> Short-term mein followers badh sakte hain, par engagement rate crash kar jaata hai. Algorithm dekhta hai ki kitne followers actually tumhara content dekhte hain. Agar 10k followers hain aur 50 likes aa rahe hain — algorithm samjhega ki content bekar hai. <em>Fake growth = real damage.</em></p>
+  </div>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>Pehle 1 ghante ki engagement algorithm ke liye sabse important signal hai.</li>
+      <li>Stories human connection banati hain — yahi long-term growth ka foundation hai.</li>
+      <li>Collaborations fastest organic growth hack hain — underrated aur underused.</li>
+    </ul>
+  </div>
+
+  <!-- CHAPTER 6 — 30 DAY PLAN -->
+  <div class="page-break"><span class="page-number">Chapter 06</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">06 · Action Plan</div>
+    <h2 class="chapter-title">30 Din Ka Game Plan</h2>
+    <p class="chapter-subtitle">Ek mahina, teen phases, complete transformation</p>
+  </div>
+
+  <p class="body-text">Theory padhna easy hai. Execution hard. Isliye main tumhare liye exactly bataungi ki <strong>kaunse din kya karna hai.</strong> Iss plan ko follow karo — dimaag mat lagao, bas execute karo. Confidence baad mein aata hai, pehle action lena padta hai.</p>
+
+  <figure class="section-img">
+    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=900&q=80" alt="Planning and execution" />
+    <figcaption>Ek clear plan ke saath, har din meaningful progress hogi</figcaption>
+  </figure>
+
+  <div class="plan-phases">
+    <div class="phase-card phase-1">
+      <div class="phase-label">Days 01–10 · Phase 1</div>
+      <div class="phase-title">🧹 Cleanup & Foundation</div>
+      <ul class="phase-items">
+        <li>Purani bekar posts delete ya archive karo — sirf best 9-12 posts rakhne chahiye.</li>
+        <li>Bio rewrite karo — Who you are + Who you help + CTA. No fluff.</li>
+        <li>Ek saaf, professional DP lagao — clearly visible, light background.</li>
+        <li>Apni niche 100% final karo — ek topic, ek audience, ek promise.</li>
+        <li>3 color palette aur 2 fonts finalize karo apne brand ke liye.</li>
+        <li>CapCut ya InShot pe ek default editing template banao — consistent look ke liye.</li>
+        <li>5 similar accounts identify karo jinka content tumhe inspire karta ho — inhe regularly engage karo.</li>
+        <li>Highlights banao aur clean covers design karo — profile organized dikhna chahiye.</li>
+        <li>Pehla "anchor reel" plan karo — apna best content jo profile par permanently ho.</li>
+        <li>Content calendar banao agle 20 dino ke liye — topics pehle se decide karo.</li>
+      </ul>
+    </div>
+
+    <div class="phase-card phase-2">
+      <div class="phase-label">Days 11–20 · Phase 2</div>
+      <div class="phase-title">🎬 Creation & Testing</div>
+      <ul class="phase-items">
+        <li>Roz minimum 1 reel post karo — no excuses, no "aaj mood nahi hai."</li>
+        <li>Har video mein alag hook try karo — text hook, visual hook, verbal hook.</li>
+        <li>Natural light mein shoot karo — subah 8-11 bje ya shaam 4-6 bje best time hai.</li>
+        <li>Har post ke baad 60 minutes active raho — reply karo, engage karo.</li>
+        <li>Daily 4 stories post karo — mix of polls, Q&A, behind-the-scenes.</li>
+        <li>Caption mein 3-4 keywords naturally use karo apni niche ke.</li>
+        <li>Hafte mein ek "Save-worthy" post — tips list, checklist, ya how-to content.</li>
+        <li>Analytics check karo hafte ke end mein — best performing content identify karo.</li>
+        <li>Ek potential collaboration reach out karo — value-first approach lo.</li>
+        <li>Apne best reel ka "Part 2" banao — series content repeat viewers laata hai.</li>
+      </ul>
+    </div>
+
+    <div class="phase-card phase-3">
+      <div class="phase-label">Days 21–30 · Phase 3</div>
+      <div class="phase-title">🤝 Connect & Compound</div>
+      <ul class="phase-items">
+        <li>Apni niche ke creators se genuinely connect karo — meaningful comments, not just emojis.</li>
+        <li>Ek collab reel execute karo — even a simple duet or stitch kaam karta hai.</li>
+        <li>DMs ka reply pyaar se aur promptly do — har DM ek potential long-term follower hai.</li>
+        <li>Ek "Ask Me Anything" story session karo — audience engagement boost karta hai.</li>
+        <li>Best performing content ko identify karke 30-day data review karo.</li>
+        <li>Next month ka content plan banao — proven hooks aur topics use karo.</li>
+        <li>Community hashtags join karo — apni niche ke active spaces mein visible raho.</li>
+        <li>Ek "Thank You" post banao — audience appreciate feel karti hai, loyalty badhti hai.</li>
+        <li>Ek educational carousel try karo — high-save content hai.</li>
+        <li>Apne 30-day journey ko reflect karo aur learnings share karo — authentic content always wins.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-sage">
+    <div class="callout-label">💬 Real Talk</div>
+    <p class="callout-text">30 din ke baad tum perfect nahi honge — par tum clearly better honge. Growth non-linear hoti hai. Kuch din lagega ki kuch kaam nahi kar raha. Uss din bhi post karo. Uss din bhi engage karo. <strong>Compound effect tabhi kaam karta hai jab tum consistently show up karte raho.</strong></p>
+  </div>
+
+  <div class="takeaway">
+    <div class="takeaway-label">✦ Chapter Takeaway</div>
+    <ul>
+      <li>Phase 1 foundation banata hai, Phase 2 content machine shuru karta hai, Phase 3 community grow karta hai.</li>
+      <li>60-minute post-engagement rule har din follow karo — yeh non-negotiable hai.</li>
+      <li>Data har hafte review karo — proven content ko zyaada banao, weak content choddo.</li>
+    </ul>
+  </div>
+
+  <!-- SUMMARY FLOWCHART -->
+  <div class="page-break"><span class="page-number">Chapter 07</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">07 · Quick Reference</div>
+    <h2 class="chapter-title">Sab Kuch Ek Nazar Mein</h2>
+    <p class="chapter-subtitle">Screenshot karo, save karo, roz dekho</p>
+  </div>
+
+  <p class="body-text">Yeh flowchart tumhara daily cheat-sheet hai. Jab bhi confused ho, yahan aao. <strong>Yeh poori guide ki summary hai — ek single view mein.</strong></p>
+
+  <div class="flowchart">
+    <h3>7K Followers Ka Woh Secret — Growth Flowchart</h3>
+    <div class="flow-steps">
+      <div class="flow-item"><span>Foundation · Days 1-10</span><p>🧹 Profile Cleanup + Clear Niche + Bio Rewrite + Visual Identity Set</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Hook Strategy</span><p>🎣 Strong 1.5-second Hook: Text / Visual / Verbal — Test all 3 types</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>C-A-S Framework</span><p>✨ Captivate → Align → Share — Apply to every single post</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Content Creation · Days 11-20</span><p>🎬 Daily Reels + Natural Light + Consistent Aesthetic + Keyword Captions</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Golden 60-Minute Window</span><p>⏰ Post → Immediately reply to all comments → Engage on 5-10 other posts</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Community & Connection · Days 21-30</span><p>🤝 Daily Stories + Collabs + Meaningful Comments + DM Replies</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Weekly Data Review</span><p>📊 Check Analytics → Double down on what worked → Drop what didn't</p></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-item"><span>Result</span><p>📈 Consistent Growth + Engaged Community + Authority in Your Niche</p></div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="page-break"><span class="page-number">Chapter 08</span></div>
+
+  <div class="chapter-header">
+    <div class="chapter-label">08 · Ab Baari Aapki Hai</div>
+    <h2 class="chapter-title">Ek Last Baat...</h2>
+    <p class="chapter-subtitle">Yeh ebook padhna kaafi nahi hai</p>
+  </div>
+
+  <p class="body-text">Main jaanti hoon — tum abhi motivated feel kar rahe ho. Raat bhar padhte raho, next morning sochunga ya sochungi "kal se shuru karungi ya karunga." <strong>Woh kal wala kal kabhi nahi aata.</strong> Yeh puri life ka sabse dangerous trap hai.</p>
+
+  <p class="body-text">Tumhare paas ab sab kuch hai jo chahiye tha — framework, strategy, 30-day plan, pro tips. <strong>Jo missing hai woh sirf ek cheez hai: tumhara pehla step.</strong></p>
+
+  <div class="cta-section">
+    <div class="cta-label">08 · Call To Action · Start Now</div>
+    <h2 class="cta-title">Ab Kya?<br><em>Shuru Karo Abhi!</em></h2>
+    <p class="cta-body">Ebook padhne se followers nahi badhte — video upload karne se badhte hain. Zyaada mat socho. Phone uthao, camera saaf karo, aur apna next step lo.</p>
+
+    <div class="cta-steps">
+      <div class="cta-step-item">
+        <span class="cta-step-num">1</span>
+        <p>Abhi phone uthao aur lens saaf karo</p>
+      </div>
+      <div class="cta-step-item">
+        <span class="cta-step-num">2</span>
+        <p>Bio rewrite karo — abhi, isi waqt</p>
+      </div>
+      <div class="cta-step-item">
+        <span class="cta-step-num">3</span>
+        <p>Kal subah ek reel shoot karo — kuch bhi</p>
+      </div>
+    </div>
+
+    <a href="#" class="cta-btn">Apna Momentum Shuru Karo ✦</a>
+
+    <p class="cta-sign">Tum capable ho — mujhe tumpar pura bharosa hai. 🥂<br><strong>— niidxaa</strong></p>
+  </div>
+
+  <div class="footer">
+    <p>© 2024 · <strong>7K Followers Ka Woh Secret</strong> by <strong>@niidxaa</strong> · All rights reserved.</p>
+    <p style="margin-top:8px;">Iss ebook ko bina permission ke copy ya distribute mat karna 🙏</p>
+  </div>
+
+</div><!-- end .ebook -->
+</body>
+</html>
